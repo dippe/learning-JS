@@ -21,7 +21,7 @@ function BasicPromise(cb) {
     
     this.then = (cb => {
         if (this.result) {
-            cb(result);         // handle the already existing results immediately
+            cb(this.result);         // handle the already existing results immediately
         } else {
             this.cbs.push(cb);  // if there is no result yet, then store the callback for later call
         }
